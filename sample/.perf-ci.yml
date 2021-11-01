@@ -1,0 +1,32 @@
+
+performance:
+
+  input-collection: |
+
+     from cunit.base_test_class import BaseTestClass
+     import os
+     list = [1,2,3,4,5,6,7,8,9,10]
+     for l in list:
+
+     
+        BaseTestClass.dicover_test_path(os.getcwd()+'/test')
+        BaseTestClass.test_case_loader(l,False,l)
+      
+     from test import vypr
+     vypr.end_monitoring()
+
+
+#     - script-path: /Users/omarjaved/Documents/USI_Coursework/projects/CERN_PROJECT/test/citest1/input_collection.py
+
+ # fail-fast: True
+
+#  unit-test-measurement:
+#    - plugin: TimeMeasurement
+#
+#  check-point:
+#      - resume: 5
+#      - stop:   8
+
+
+  performance-specification:
+    - ./VyPR_queries.py
